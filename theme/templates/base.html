@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
-{% load cache %}
+
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -114,9 +114,9 @@
 
 {% block middle_wrapper %}
 {% block middle_class %}<div class="col-md-7 middle">{% endblock %}
-    {% cache 300 main %}
+    
     {% block main %}{% endblock %}
-    {% endcache %}
+    
 {% block middle_div %}</div>{% endblock %}
 {% endblock %}
 
